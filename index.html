@@ -1,9 +1,55 @@
-<html>
-  <head>
-    <title>임나연의 첫 홈페이지</title>
-  </head>
-  <body>
-    <h1>나의 첫 홈페이지</h1>
-    <h2>hello!</h2>
-  </body>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BAU INTERIOR | 공간의 기준을 바꾸다</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+:root{--brown:#4b3025;--deep:#2b1b15;--cream:#f7f3ee;--white:#fff;--line:#dfd4ca}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Nanum Gothic',sans-serif;color:var(--deep);background:var(--cream)}
+a{text-decoration:none;color:inherit}.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.nav-inner{max-width:1200px;margin:auto;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}.logo{font-weight:800;font-size:22px;letter-spacing:2px;color:var(--brown)}.links{display:flex;gap:24px;font-size:13px;font-weight:700}.links a:hover{color:#9a6b52}
+.hero{min-height:100vh;display:grid;place-items:center;padding:120px 24px 70px;background:linear-gradient(135deg,#fff 0%,#f4ece5 48%,#d9c1b0 100%);overflow:hidden}
+.hero-inner{max-width:1200px;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.eyebrow{font-size:12px;letter-spacing:3px;font-weight:800;color:#8a604b}.hero h1{font-size:clamp(42px,6vw,78px);line-height:1.08;margin:16px 0 24px;letter-spacing:-4px}.hero p{font-size:17px;line-height:1.9;color:#624c41;max-width:600px}.btn{display:inline-block;margin-top:22px;padding:16px 28px;background:var(--brown);color:white;border-radius:4px;font-weight:700}.visual{height:560px;border-radius:8px;background:linear-gradient(145deg,#5a3b2e,#b58d72);position:relative;box-shadow:25px 30px 70px #5a3b2e33;overflow:hidden}.visual:before{content:"";position:absolute;inset:45px 35px 70px 65px;background:linear-gradient(160deg,#f8f4ef,#cdb29f);transform:skewY(-5deg);opacity:.9}.visual:after{content:"BAU";position:absolute;right:24px;bottom:18px;color:#fff;font-size:76px;font-weight:800;letter-spacing:8px;opacity:.22}
+section{padding:110px 24px}.wrap{max-width:1200px;margin:auto}.section-head{margin-bottom:48px}.section-head small{color:#8a604b;font-weight:800;letter-spacing:2px}.section-head h2{font-size:42px;margin:12px 0}.section-head p{color:#715d52;line-height:1.8}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;padding:34px;min-height:240px;border:1px solid var(--line);transition:.35s}.card:hover{transform:translateY(-8px);box-shadow:0 20px 45px #4b30251a}.num{font-size:12px;color:#9a6b52;font-weight:800}.card h3{font-size:23px;margin:25px 0 12px}.card p{line-height:1.8;color:#725f54}
+.projects{background:#fff}.project-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-auto-rows:260px;gap:16px}.project{position:relative;overflow:hidden;background:linear-gradient(135deg,#d9c4b4,#725143);border-radius:3px}.project:nth-child(2){background:linear-gradient(135deg,#eee4da,#9b7865)}.project:nth-child(3){background:linear-gradient(135deg,#c7aa95,#4c3328)}.project:nth-child(4){background:linear-gradient(135deg,#f0e8df,#806052)}.project:nth-child(5){background:linear-gradient(135deg,#b99379,#3c2922)}.project:first-child{grid-row:span 2}.project span{position:absolute;left:22px;bottom:20px;color:#fff;font-weight:800;text-shadow:0 2px 10px #0008}
+.stats{background:var(--brown);color:white}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.stat{padding:25px;border-left:1px solid #ffffff33}.stat strong{display:block;font-size:42px;margin-bottom:10px}.stat span{font-size:13px;color:#eadbd2}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}.process{background:#fff;padding:30px;min-height:210px}.process b{font-size:14px;color:#9a6b52}.process h3{margin:28px 0 12px}.process p{line-height:1.7;color:#715d52;font-size:14px}
+.cta{background:#eadfd5;text-align:center}.cta h2{font-size:44px;margin:0 0 16px}.cta p{color:#6d584c}.footer{background:#2b1b15;color:#cdbbb0;padding:38px 24px;font-size:12px}.footer-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between}
+@media(max-width:800px){.links{display:none}.hero-inner{grid-template-columns:1fr}.visual{height:360px}.cards,.stat-grid,.process-grid{grid-template-columns:1fr 1fr}.project-grid{grid-template-columns:1fr 1fr}.project:first-child{grid-row:auto}.hero h1{letter-spacing:-2px}.footer-inner{display:block;line-height:2}}
+@media(max-width:520px){.cards,.stat-grid,.process-grid,.project-grid{grid-template-columns:1fr}section{padding:80px 18px}.hero{padding-left:18px;padding-right:18px}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a class="logo" href="#home">BAU INTERIOR</a><div class="links"><a href="#about">소개</a><a href="#projects">프로젝트</a><a href="#process">서비스</a><a href="#contact">상담</a></div></div></nav>
+
+<main id="home">
+<section class="hero"><div class="hero-inner"><div>
+<div class="eyebrow">SPACE · DESIGN · LIFESTYLE</div>
+<h1>공간의 기준을<br>새롭게 만들다.</h1>
+<p>집의 구조와 생활 방식을 깊이 이해하고, 디자인부터 시공까지 하나의 기준으로 완성합니다.</p>
+<a class="btn" href="#contact">무료 공간 상담</a>
+</div><div class="visual" aria-label="인테리어 이미지 영역"></div></div></section>
+
+<section id="about"><div class="wrap"><div class="section-head"><small>ABOUT BAU</small><h2>당신의 일상을 설계합니다.</h2><p>BAU INTERIOR는 주거 공간을 중심으로 설계·디자인·시공을 연결하는 인테리어 전문 브랜드입니다.</p></div>
+<div class="cards"><article class="card"><span class="num">01</span><h3>공간 설계</h3><p>동선과 수납, 채광까지 생활의 디테일을 분석해 맞춤 공간을 설계합니다.</p></article><article class="card"><span class="num">02</span><h3>디자인</h3><p>유행보다 오래 지속되는 소재와 비례를 바탕으로 공간의 완성도를 높입니다.</p></article><article class="card"><span class="num">03</span><h3>시공 관리</h3><p>공정별 품질 기준과 현장 관리를 통해 계획된 디자인을 실제 공간으로 구현합니다.</p></article></div></div></section>
+
+<section id="projects" class="projects"><div class="wrap"><div class="section-head"><small>PROJECTS</small><h2>공간이 작품이 되는 순간.</h2></div><div class="project-grid"><div class="project"><span>MODERN HOUSE · 84㎡</span></div><div class="project"><span>WARM LIVING · 59㎡</span></div><div class="project"><span>TIMELESS HOME · 102㎡</span></div><div class="project"><span>MINIMAL HOUSE · 74㎡</span></div><div class="project"><span>URBAN LIVING · 92㎡</span></div></div></div></section>
+
+<section class="stats"><div class="wrap"><div class="stat-grid"><div class="stat"><strong data-count="10000">0</strong><span>누적 프로젝트</span></div><div class="stat"><strong data-count="98">0</strong><span>고객 만족도 %</span></div><div class="stat"><strong data-count="15">0</strong><span>디자인 노하우 YEAR</span></div><div class="stat"><strong data-count="24">0</strong><span>상담 응답 HOUR</span></div></div></div></section>
+
+<section id="process"><div class="wrap"><div class="section-head"><small>PROCESS</small><h2>처음부터 끝까지, 한 팀.</h2></div><div class="process-grid"><div class="process"><b>STEP 01</b><h3>상담</h3><p>생활 방식과 예산, 원하는 공간을 구체적으로 확인합니다.</p></div><div class="process"><b>STEP 02</b><h3>설계</h3><p>현장 실측을 바탕으로 평면과 디자인 방향을 제안합니다.</p></div><div class="process"><b>STEP 03</b><h3>시공</h3><p>공정별 체크와 현장 관리로 설계 의도를 구현합니다.</p></div><div class="process"><b>STEP 04</b><h3>완공</h3><p>최종 검수 후 새로운 생활을 시작할 수 있도록 안내합니다.</p></div></div></div></section>
+
+<section id="contact" class="cta"><div class="wrap"><h2>당신의 집, 함께 바꿔볼까요?</h2><p>상담 내용을 남겨주시면 공간에 맞는 방향을 제안해드립니다.</p><a class="btn" href="mailto:contact@example.com">상담 문의하기</a></div></section>
+</main>
+<footer class="footer"><div class="footer-inner"><div>BAU INTERIOR</div><div>© 2026 BAU INTERIOR. All rights reserved.</div></div></footer>
+<script>
+const items=document.querySelectorAll('[data-count]');
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count;let n=0;const step=Math.max(1,Math.ceil(end/45));const timer=setInterval(()=>{n=Math.min(n+step,end);el.textContent=n.toLocaleString()+(end===98?'%':end===15?'년':end===24?'H':'');if(n>=end)clearInterval(timer)},25);observer.unobserve(el)})},{threshold:.5});
+items.forEach(i=>observer.observe(i));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
+</script>
+</body>
 </html>
